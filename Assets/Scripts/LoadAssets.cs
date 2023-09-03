@@ -7,9 +7,12 @@ public class LoadAssets : MonoBehaviour
     // Start is called before the first frame update
     public GameObject redObj;
     [SerializeField]
+    private GameObject blueObj;
     void Start()
     {
-        
+        Instantiate(redObj, new Vector3(2, 0, 0), Quaternion.identity);
+        Instantiate(blueObj, new Vector3(-2, 0, 0), Quaternion.identity);
+        Application.targetFrameRate = 60;
     }
 
     // Update is called once per frame
